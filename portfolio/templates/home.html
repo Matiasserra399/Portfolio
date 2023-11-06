@@ -8,17 +8,13 @@
         <img src="{% static 'portfolio/icon2.jpg' %}" alt="">
     </div>
 
-    <div class="col-md-8 my-auto text-center">
+    <div class="col-md-10 my-auto text-center">
         <h1><strong>Matias Serra</strong></h1>
-        <h3>I am a Python FullStack Developer</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fugit nam temporibus incidunt facilis vitae
-            ipsam tempora expedita voluptas ad, numquam, praesentium consequatur labore! Sed repudiandae rerum rem,
-            ipsam accusamus assumenda! Nostrum necessitatibus quia non molestias suscipit voluptatibus dolorem ratione
-            vero laborum labore, minus aliquid tenetur repellat iure quam soluta voluptas aperiam. Aut laborum
-            architecto earum dolore natus doloremque ducimus dolorem adipisci fugit quibusdam? Itaque maxime totam
-            corporis. Rem ipsam laborum magnam ut rerum ducimus repellendus inventore repudiandae quidem, ratione ad
-            asperiores eum consequatur possimus quas. Aliquid aliquam, corporis iste qui molestias perferendis quam
-            doloribus enim, culpa dolorum eum ex?</p>
+        <h3>Hola!</h3>
+        <p>Soy Matías, un apasionado estudiante autodidacta de programación con experiencia en Python, Django, FastAPI,
+            análisis de datos y desarrollo web (HTML y CSS). Mi enfoque se centra en la creación de soluciones
+            tecnológicas innovadoras y la mejora constante de mis habilidades. Me emociona aprender y enfrentar nuevos
+            desafíos en el mundo tecnológico</p>
         <a href="{% static 'portfolio/cv.pdf'%}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank">
             Downnload CV</a>
 
@@ -28,18 +24,18 @@
 </header>
 
 
-<div class="row my-4 text-center">
-    <h3>Mis Proyectos</h3>
+<div class="row my-2 text-center">
+    <h1>Mis Proyectos</h1>
 
     {% for project in projects %}
 
-    <div class="col-md-4 p-5">
+    <div class="col-md-3 p-3">
         <div class="card bg-black card-project">
             <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top" />
             <div class="card-body">
 
-                <h2>{{project.title}}</h2>
-                <p>{{project.description}}</p>
+                <h2 class="text-white">{{project.title}}</h2>
+                <p class="text-white">{{project.description}}</p>
 
                 {% if project.url %}
                 <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
@@ -48,6 +44,43 @@
             </div>
         </div>
     </div>
+
+    <body>
+        <div class="container">
+            <header class="row bg-black d-flex justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <h1>Contacto</h1>
+                </div>
+                <section class="col-md-4">
+                    <h2>Contáctame por correo electrónico:</h2>
+                    <p>
+                        <a href="mailto:matiasserra399@gmail.com" class="btn btn-sm btn-primary"
+                            target="_blank">matiasserra399@gmail.com</a>
+                    </p>
+                    <h3>Mi perfil en GitHub:</h3>
+                    <p>
+                        <a href="https://github.com/Matiasserra399" class="btn btn-sm btn-primary"
+                            target="_blank">GitHub/Matiasserra399</a>
+                    </p>
+    
+                    <h3>Mi perfil en LinkedIn:</h3>
+                    <p>
+                        <a href="https://www.linkedin.com/in/matias-serra-a01b1b28b" class="btn btn-sm btn-primary"
+                            target="_blank">LinkedIn/MatiasSerra</a>
+                    </p>
+                </section>
+            </header>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+            
+        
+
+
+
+
 
     {% endfor %}
 
